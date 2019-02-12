@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1= title
+  p S3 Client
+  p List of Bucket Objects
+  
+  table
+    tr
+        td Key
+        td Size
+        td Etag
+        
+    each object in objects
+        tr
+            td= object.Key
+            td= object.Size
+            td= object.ETag
